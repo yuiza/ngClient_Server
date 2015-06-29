@@ -1,0 +1,22 @@
+{
+	"name": "ngClient+",
+	"description": "test AngularJS client",
+	"version": "0.2",
+	"app" : {
+		"background": {
+			"scripts": ["background.js", "angular.min.js", "server.js"]
+			}
+	},
+	"sockets": {
+		"tcp": { 
+		//port22, any host or port23, any host
+		//ex. "connect" : ["*:22", "*:23"]
+		//any port ,any host
+			"connect": ""
+		},
+		"tcpServer": {
+            "listen": "*"
+        }
+	},
+	"permissions": []
+}

@@ -1,0 +1,6 @@
+.scr {
+  overflow: scroll;   /* スクロール表示 */ 
+  width: 290px;
+  height: 300px;
+  background-color: #E6E6E6;
+}

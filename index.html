@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app ng-csp>
+    <head>
+    	<meta charset="UTF-8">
+    	<script src="angular.min.js"></script>
+    	<script src="controller.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>  
+    	<h1>Client</h1>
+
+        <div ng-controller='tcpController'>
+            <p>IP Address: {{ipaddr}} Port: {{portNum}}</p>
+            <input type="text" ng-model="ipaddr" placeholder="IP Address">
+            <input type="number" ng-model="portNum" placeholder="Port">
+            <button ng-click="connect()">connect</button>
+            <button ng-click="disconnect()">disconnect</button>
+
+    		<div class="scr">
+                <table ng-repeat = "comments in comments">
+                    <td><span>{{comments.time}} : {{comments.comments}}</span></td>
+                </table>    
+            </div>
+
+            <input type="text" ng-model="message">
+            <button ng-click="send()">send</button>
+        </div>
+
+    </body>
+</html>
